@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes change-text {
+  0%,
+  25% {
+    transform: translateY(-20px);
+    color: #ffa500;
+    content: "JavaScript Developer";
+  }
+  50%,
+  75% {
+    color: #f1b647;
+    content: "TypeScript Developer";
+  }
+  80% {
+    color: #fbebcf;
+    content: "React Developer";
+  }
+}
+
+.myText::before {
+  content: "FullStack Developer";
+  animation: change-text 8s ease-in-out infinite;
+  display: inline-block;
+}
